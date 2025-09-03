@@ -6,7 +6,7 @@ export function POST() {
   return Response.json({ ok: true, status: 201, message: 'V1 ROUTE POST METHOD' })
 }
 
-export function DELTE() {
+export function DELETE() {
   return Response.json({ ok: true, status: 202, message: 'V1 ROUTE DELETE METHOD' })
 }
 
