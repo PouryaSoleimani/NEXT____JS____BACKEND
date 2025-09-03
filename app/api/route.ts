@@ -1,7 +1,3 @@
 export function GET() {
-  return Response.json({ message: 'GET REQUEST' })
+  return Response.json({ ok: true, message: 'BASE URL' })
 }
-
-
-
-
