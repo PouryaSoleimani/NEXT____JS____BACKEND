@@ -1,10 +1,10 @@
 
 const users = [
-  { id: 1, firstname: 'POURYA', lastname: "SOLEIMANI" },
-  { id: 2, firstname: 'ALI', lastname: "MOHAMMADI" },
-  { id: 3, firstname: 'REZA', lastname: "JAFARI" },
-  { id: 4, firstname: 'MAMAD', lastname: "YOUSEFI" },
-  { id: 5, firstname: 'MAHDI', lastname: "JAFARI" },
+  { id: 1, firstName: 'POURYA', lastName: "SOLEIMANI" },
+  { id: 2, firstName: 'ALI', lastName: "MOHAMMADI" },
+  { id: 3, firstName: 'REZA', lastName: "JAFARI" },
+  { id: 4, firstName: 'MAMAD', lastName: "YOUSEFI" },
+  { id: 5, firstName: 'MAHDI', lastName: "JAFARI" },
 ]
 
 export function GET() {
