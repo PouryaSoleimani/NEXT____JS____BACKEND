@@ -1,7 +1,7 @@
 {
-  "editor.fontFamily": "Roboto Mono , Vazir",
-  "editor.fontWeight": "600",
-  "editor.letterSpacing": 0,
+  "editor.fontFamily": "Consolas, Vazir",
+  "editor.fontWeight": "700",
+  "editor.letterSpacing": 0.5,
   "editor.lineHeight": 1.6,
   "editor.fontSize": 11,
   "editor.bracketPairColorization.enabled": true,
@@ -20,15 +20,15 @@
   "tailwind-fold.foldStyle": "QUOTES",
   "workbench.colorCustomizations": {
     "[Next Dark Pro]": {
-      // "editor.background": "#111316",
-      "editor.background": "#0d0d0d",
-      "breadcrumb.background": "#0d0d0d",
-      "editorGutter.background": "#0d0d0d",
-      "tab.activeBackground": "#0d0d0d",
+      // "editor.background": "#0c0d0f",
+      "editor.background": "#0c0d0f",
+      "breadcrumb.background": "#0c0d0f",
+      "editorGutter.background": "#0c0d0f",
+      "tab.activeBackground": "#0c0d0f",
       "input.background": "#171b21",
-      "tab.activeBorder": "#0d0d0d",
-      "editorGroup.emptyBackground": "#0d0d0d",
-      "tab.hoverBorder": "#0d0d0d",
+      "tab.activeBorder": "#0c0d0f",
+      "editorGroup.emptyBackground": "#0c0d0f",
+      "tab.hoverBorder": "#0c0d0f",
       "editorLineNumber.foreground": "#5353538b",
       "editorLineNumber.activeForeground": "#848484",
       "titleBar.border": "#504f4f",
@@ -360,6 +360,13 @@
           "settings": {
             "foreground": "#D19A66"
           }
+        },
+        {
+          "name": "TYPES",
+          "scope": ["variable.other.object"],
+          "settings": {
+            "fontStyle": ""
+          }
         }
       ]
     },
@@ -528,7 +535,7 @@
   "bracketPairColorizer.depreciation-notice": false,
   "window.customTitleBarVisibility": "windowed",
   "editor.minimap.showSlider": "always",
-  "workbench.colorTheme": "Next Dark Pro",
+  "workbench.colorTheme": "Dark Modern Fit",
   "terminal.integrated.fontSize": 13,
   "workbench.preferredDarkColorTheme": "Next Dark Pro"
 }

@@ -1,4 +1,3 @@
-
 const users = [
   { id: 1, firstName: 'POURYA', lastName: "SOLEIMANI" },
   { id: 2, firstName: 'ALI', lastName: "MOHAMMADI" },
@@ -13,5 +12,7 @@ export function GET(req: Request) {
 
 export async function POST(req: Request) {
   const reqBody = await req.json()
-  return Response.json({ body: reqBody })
+  const { id, firstName, lastName } = reqBody
+  users.push({ id, firstName, lastName })
+  return Response.json({ ok: true, reqBody, data: users })
 }
