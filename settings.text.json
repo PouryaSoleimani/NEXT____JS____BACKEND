@@ -1,6 +1,6 @@
 {
   "editor.fontFamily": "Roboto Mono , Vazir",
-  "editor.fontWeight": "500",
+  "editor.fontWeight": "600",
   "editor.letterSpacing": 0,
   "editor.lineHeight": 1.6,
   "editor.fontSize": 11,
@@ -21,14 +21,14 @@
   "workbench.colorCustomizations": {
     "[Next Dark Pro]": {
       // "editor.background": "#111316",
-      "editor.background": "#0f0f0f",
-      "breadcrumb.background": "#0f0f0f",
-      "editorGutter.background": "#0f0f0f",
-      "tab.activeBackground": "#0f0f0f",
+      "editor.background": "#0d0d0d",
+      "breadcrumb.background": "#0d0d0d",
+      "editorGutter.background": "#0d0d0d",
+      "tab.activeBackground": "#0d0d0d",
       "input.background": "#171b21",
-      "tab.activeBorder": "#0f0f0f",
-      "editorGroup.emptyBackground": "#0f0f0f",
-      "tab.hoverBorder": "#0f0f0f",
+      "tab.activeBorder": "#0d0d0d",
+      "editorGroup.emptyBackground": "#0d0d0d",
+      "tab.hoverBorder": "#0d0d0d",
       "editorLineNumber.foreground": "#5353538b",
       "editorLineNumber.activeForeground": "#848484",
       "titleBar.border": "#504f4f",
@@ -297,7 +297,11 @@
           "punctuation",
           "meta.brace.round",
           "punctuation.definition.block",
-          "keyword.control.as"
+          "keyword.control.as",
+          "variable",
+          "string.quoted",
+          "meta.jsx.children",
+          "variable.other.object"
         ],
         "settings": {
           "fontStyle": ""
@@ -330,7 +334,7 @@
           "storage.type.function.arrow"
         ],
         "settings": {
-          "foreground": "#dddddd",
+          "foreground": "#ffffff",
           "fontStyle": ""
         }
       },
@@ -407,7 +411,12 @@
           }
         },
         {
-          "scope": ["meta.object-literal.key"],
+          "scope": [
+            "meta.object-literal.key",
+            "variable.object.property",
+            "variable.other.readwrite",
+            "variable.parameter"
+          ],
           "settings": {
             "foreground": "#62A6FF"
           }
@@ -423,7 +432,10 @@
           }
         },
         {
-          "scope": ["constant.numeric.decimal"],
+          "scope": [
+            "constant.numeric.decimal",
+            "variable.other.readwrite.alias"
+          ],
           "settings": {
             "foreground": "#fff"
           }
@@ -516,7 +528,7 @@
   "bracketPairColorizer.depreciation-notice": false,
   "window.customTitleBarVisibility": "windowed",
   "editor.minimap.showSlider": "always",
-  "workbench.colorTheme": "Vercel (Dark)",
+  "workbench.colorTheme": "Next Dark Pro",
   "terminal.integrated.fontSize": 13,
   "workbench.preferredDarkColorTheme": "Next Dark Pro"
 }

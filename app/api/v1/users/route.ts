@@ -7,6 +7,11 @@ const users = [
   { id: 5, firstName: 'MAHDI', lastName: "JAFARI" },
 ]
 
-export function GET() {
-  return Response.json({ ok: true, message: 'USERS GET', data: users })
+export function GET(req: Request) {
+  return Response.json({ ok: true, message: 'USERS GET', data: users, reqMethod: req.method })
+}
+
+export async function POST(req: Request) {
+  const reqBody = await req.json()
+  return Response.json({ body: reqBody })
 }
