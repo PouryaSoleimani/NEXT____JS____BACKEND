@@ -1,6 +1,6 @@
 import connectToDB from "@/__BACKEND__/__db__/mongoose";
 import UserModel from "@/__BACKEND__/models/UserModel";
-connectToDB();
+
 // FAKE DATAS
 const users = [
   { id: 1, firstName: "POURYA", lastName: "SOLEIMANI" },
@@ -10,22 +10,37 @@ const users = [
   { id: 5, firstName: "MAHDI", lastName: "JAFARI" }
 ];
 
-export function GET(req: Request) {
-  return Response.json({ ok: true, message: "USERS GET", data: users, reqMethod: req.method });
+export async function GET(req: Request) {
+  try {
+    await connectToDB();
+    const users = await UserModel.find({}).select("firstName lastName");
+    return Response.json({
+      ok: true,
+      message: "USERS GET",
+      data: users,
+      count: users.length,
+      reqMethod: req.method
+    });
+  } catch (error) {
+    return Response.json({ ok: false, message: "Database connection failed" }, { status: 500 });
+  }
 }
 
 export async function POST(req: Request) {
-  const reqBody = await req.json();
-  const { firstName, lastName } = reqBody;
-
-  // users.push({ id, firstName, lastName });
-
-  const newUser = await UserModel.create({ firstName, lastName });
-  // console.log(newUser);
-  // return Response.json({ newUser });
-  if (newUser) {
-    return Response.json({ ok: true, reqBody, message: "USER CREATED" }, { status: 201 });
-  } else {
-    return Response.json({ ok: false, message: "INVALID REQUEST" }, { status: 409 });
+  try {
+    await connectToDB();
+    const reqBody = await req.json();
+    const { firstName, lastName } = reqBody;
+    if (!firstName?.trim() || !lastName?.trim()) {
+      return Response.json({ ok: false, message: "First name and last name are required" }, { status: 400 });
+    }
+    const newUser = await UserModel.create({ firstName: firstName.trim(), lastName: lastName.trim() });
+    return Response.json({ ok: true, data: { id: newUser._id, firstName: newUser.firstName, lastName: newUser.lastName }, message: "User created successfully" }, { status: 201 });
+  } catch (error: any) {
+    console.error("POST ERROR:", error);
+    if (error.code === 11000) {
+      return Response.json({ ok: false, message: "User already exists" }, { status: 409 });
+    }
+    return Response.json({ ok: false, message: "Internal server error" }, { status: 500 });
   }
 }
