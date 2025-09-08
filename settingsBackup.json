@@ -1,6 +1,6 @@
 {
-  "editor.fontFamily": "Consolas,Vazirmatn",
-  "editor.fontWeight": "600",
+  "editor.fontFamily": "Consolas,Vazir",
+  "editor.fontWeight": "700",
   "editor.letterSpacing": 0.5,
   "editor.lineHeight": 1.8,
   "editor.fontSize": 11,
@@ -11,7 +11,7 @@
   "window.zoomLevel": -1,
   "editor.minimap.enabled": false,
   "files.autoSave": "afterDelay",
-  "terminal.integrated.fontFamily": "Roboto Mono, Vazirmatn",
+  "terminal.integrated.fontFamily": "Roboto Mono, Vazir",
   "terminal.integrated.fontWeight": "600",
   "terminal.integrated.smoothScrolling": true,
   "terminal.integrated.mouseWheelZoom": true,
@@ -79,15 +79,15 @@
       "tab.unfocusedActiveBorderTop": "#fff",
       "sash.hoverBorder": "#1f6feb"
     },
-    "[Vercel (Dark)]": {
-      "editor.background": "#0F0F0F",
-      "breadcrumb.background": "#0F0F0F",
-      "editorGutter.background": "#0F0F0F",
-      "tab.activeBackground": "#0F0F0F",
-      "input.background": "#0F0F0F",
-      "tab.activeBorder": "#0F0F0F",
-      "editorGroup.emptyBackground": "#0F0F0F",
-      "tab.hoverBorder": "#0F0F0F00",
+    "[Next Dark Pro]": {
+      "editor.background": "#0a0c10",
+      "breadcrumb.background": "#0a0c10",
+      "editorGutter.background": "#0a0c10",
+      "tab.activeBackground": "#0a0c10",
+      "input.background": "#0a0c10",
+      "tab.activeBorder": "#0a0c10",
+      "editorGroup.emptyBackground": "#0a0c10",
+      "tab.hoverBorder": "#0a0c1000",
       "editorLineNumber.foreground": "#898989bf",
       "editorLineNumber.activeForeground": "#afafaf",
       "editorIndentGuide.background1": "#484848",
@@ -276,7 +276,7 @@
         }
       }
     ],
-    "[Min Theme+]": {
+    "[Next Dark Pro]": {
       "textMateRules": [
         {
           "scope": [
@@ -522,7 +522,7 @@
   "betterFolding.showOnlyRegionsDescriptions": true,
   "betterFolding.showFoldedBodyLinesCount": false,
   "vsicons.presets.tsOfficial": true,
-  "workbench.colorTheme": "GitHub Dark Default",
+  "workbench.colorTheme": "Next Dark Pro",
   "bracket-pair-colorizer-2.depreciation-notice": false,
   "chat.instructionsFilesLocations": {
     ".github/instructions": true,

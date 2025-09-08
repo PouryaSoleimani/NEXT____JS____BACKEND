@@ -17,7 +17,7 @@ const UsersPage = () => {
       <div className="bg-neutral-900 p-4 rounded-lg flex flex-col gap-3 font-bold">
         {data?.data?.map((item: SingleUserType) => (
           <div key={item.id} className="text-white">
-            {item.id}. {item.firstName} {item.lastName}
+            {item.id}. {item.firstName} {item.lastName} شسیشسیشسی
           </div>
         ))}
       </div>
