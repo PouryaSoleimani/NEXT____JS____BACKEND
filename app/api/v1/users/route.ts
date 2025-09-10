@@ -31,7 +31,7 @@ export async function POST(req: Request) {
         { status: 400 }
       );
     }
-
+    // CREATING NEW USER
     const newUser = await UserModel.create({
       firstName: firstName.trim(),
       lastName: lastName.trim()
