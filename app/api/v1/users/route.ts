@@ -2,7 +2,7 @@
 import connectToDB from "@/__BACKEND__/__db__/mongoose";
 import UserModel from "@/__BACKEND__/models/UserModel";
 
-// FAKE DATAS
+//^ FAKE DATAS
 const users = [
   { id: 1, firstName: "POURYA", lastName: "SOLEIMANI" },
   { id: 2, firstName: "ALI", lastName: "MOHAMMADI" },
