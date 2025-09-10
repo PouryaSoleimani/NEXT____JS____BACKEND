@@ -24,6 +24,7 @@ export async function POST(req: Request) {
     await connectToDB();
     const reqBody = await req.json();
     const { firstName, lastName } = reqBody;
+
     // SIMPLE VALIDATION CHECK
     if (!firstName?.trim() || !lastName?.trim()) {
       return Response.json(
@@ -31,11 +32,13 @@ export async function POST(req: Request) {
         { status: 400 }
       );
     }
+
     // CREATING NEW USER
     const newUser = await UserModel.create({
       firstName: firstName.trim(),
       lastName: lastName.trim()
     });
+
     return Response.json(
       {
         ok: true,
